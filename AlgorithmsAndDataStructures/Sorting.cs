@@ -34,6 +34,20 @@ namespace AlgorithmsAndDataStructures
             }
         }
 
+        public static void InsertionSort(int[] array)
+        {
+            for (int partIndex = 1; partIndex < array.Length; partIndex++)
+            {
+                int currentUnsorted = 1;
+                int i = 0;
+                for (i = partIndex; i > 0 && array[i - 1] > currentUnsorted; i--)
+                {
+                    array[i] = array[i - 1];
+                }
+                array[i] = currentUnsorted;
+            }
+        }
+
         public static void Swap(int[] array, int i, int j)
         {
             if (i == j)

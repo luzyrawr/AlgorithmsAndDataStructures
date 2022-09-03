@@ -49,5 +49,11 @@ namespace AlgorithmsAndDataStructures.Tests
         {
             RunTestsForSortAlgorithm(Sorting.SelectionSort);
         }
+
+        [Test]
+        public void InsertionSort_ValidInput_SortedInput()
+        {
+            RunTestsForSortAlgorithm(Sorting.InsertionSort);
+        }
     }
 }
