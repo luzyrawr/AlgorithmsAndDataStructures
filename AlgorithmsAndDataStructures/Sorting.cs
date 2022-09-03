@@ -38,7 +38,7 @@ namespace AlgorithmsAndDataStructures
         {
             for (int partIndex = 1; partIndex < array.Length; partIndex++)
             {
-                int currentUnsorted = 1;
+                int currentUnsorted = array[partIndex];
                 int i = 0;
                 for (i = partIndex; i > 0 && array[i - 1] > currentUnsorted; i--)
                 {
