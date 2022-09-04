@@ -48,6 +48,25 @@ namespace AlgorithmsAndDataStructures
             }
         }
 
+        public static void ShellSort(int[] array)
+        {
+            int gap = 1;
+            while (gap < array.Length / 3)
+                gap = 3 * gap + 1;
+
+            while(gap >= 1)
+            {
+                for(int partIndex = gap; partIndex < array.Length; partIndex++)
+                {
+                    for (int j = partIndex; j >= gap && array[j] < array[j - gap]; j -= gap)
+                    {
+                        Swap(array, j, j - gap);
+                    }
+                }
+                gap /= 3;
+            }
+        }
+
         public static void Swap(int[] array, int i, int j)
         {
             if (i == j)
