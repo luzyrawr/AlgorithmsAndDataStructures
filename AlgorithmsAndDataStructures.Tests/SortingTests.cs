@@ -57,9 +57,15 @@ namespace AlgorithmsAndDataStructures.Tests
         }
 
         [Test]
-        public void ShellnSort_ValidInput_SortedInput()
+        public void ShellSort_ValidInput_SortedInput()
         {
             RunTestsForSortAlgorithm(Sorting.ShellSort);
+        }
+
+        [Test]
+        public void MergeSort_ValidInput_SortedInput()
+        {
+            RunTestsForSortAlgorithm(Sorting.MergeSort);
         }
     }
 }
